@@ -1,6 +1,6 @@
 FROM ubuntu:17.10
 
-RUN apt-get update && apt-get install build-essential git \
+RUN chsh /bin/bash && apt-get update && apt-get install build-essential git \
     curl python3 python3-setuptools -y 
 RUN easy_install3 pip
 
@@ -15,7 +15,7 @@ RUN npm install -g --silent babel-cli nodemon gulp grunt
 RUN npm link babel-cli nodemon gulp
 # add my preferences and scripts
 ADD bashrc /root/.bashrc
- 
+
 VOLUME ["/app"]
 
 
