@@ -14,6 +14,8 @@ RUN ln -s /usr/bin/python3 /usr/local/bin/python
 RUN npm install -g --silent babel-cli nodemon gulp grunt
 RUN npm link babel-cli nodemon gulp
 # add my preferences and scripts
+ADD bashrc /root/.bashrc
+ 
 VOLUME ["/app"]
 
 
