@@ -7,6 +7,6 @@ Then
 
 Run 
 
-```docker run -it -v $(pwd):/app dev-local-node:latest```
+```docker run -it -v $(pwd):/app maxkimambo/dev-local-node:latest```
 
  to land on bash console and work from there
