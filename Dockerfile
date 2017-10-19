@@ -13,13 +13,13 @@ RUN ln -s /usr/local/bin/node /usr/local/bin/nodejs
 RUN ln -s /usr/bin/python3 /usr/local/bin/python
 
 # Install dev tools
-RUN npm install -g --silent babel-cli nodemon gulp grunt
+RUN npm install -g --silent babel-cli nodemon gulp grunt jest-cli
 RUN npm link babel-cli nodemon gulp
 
 # add my preferences
 ADD bashrc /root/.bashrc 
-# create volumes
-VOLUME ["/app"]
+# create volumes for source code and modules
+VOLUME ["/app", "/app/node_modules"]
 
 WORKDIR /app
 
